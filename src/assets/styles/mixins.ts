@@ -2,10 +2,15 @@ import { css } from "styled-components";
 import { colors } from "assets/styles/colors";
 import { constants } from "assets/styles/constants";
 import down from "assets/icons/down-input.png";
+import Logo from "assets/imgs/logo.png";
 
 const logoStyle = () => css`
-  font-size: ${constants.logoFontSize};
-  line-height: ${constants.logoLineHeight};
+  background-image: url(${Logo});
+  position: ${constants.logoPosition};
+  width: ${constants.logoWidth};
+  height: ${constants.logoHeight};
+  left: ${constants.logoLeft};
+  top: ${constants.logoTop};
 `;
 
 const headingStyle = () => css`
@@ -80,6 +85,35 @@ const input = () => css`
   box-sizing: border-box;
 `;
 
+const inputHome = () => css`
+  height: 60px!important;
+  min-width: 450px;
+  border-radius: 5px 0px 0px 5px;
+  background: ${colors.baseInput};
+  border: 1px solid ${colors.baseLine};
+  box-sizing: border-box;
+`;
+
+const inputBtnHome = () => css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-style: uppercase;
+  text-transform: uppercase;
+  color: ${colors.baseInput};
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  border-radius: 0px 5px 5px 0px;
+  background: ${colors.quaternaryColor};
+  border: 1px solid ${colors.baseLine};
+  box-sizing: border-box;
+  cursor: pointer;
+`;
+
 const select = (important = true) => css`
   ${input()};
   ${bodyStyle()};
@@ -100,6 +134,8 @@ export const mixins = {
   buttonOutline,
   headingStyle,
   input,
+  inputHome,
+  inputBtnHome,
   logoStyle,
   select,
 };

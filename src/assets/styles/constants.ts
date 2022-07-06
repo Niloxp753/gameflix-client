@@ -1,6 +1,9 @@
 export const constants = {
-  logoFontSize: "35px",
-  logoLineHeight: "140%",
+  logoPosition: "absolute",
+  logoWidth: "390px",
+  logoHeight: "60px",
+  logoLeft: "45px",
+  logoTop: "40px",
 
   headingFontFamiy: "Poppins Black",
   headingFontSize: "24px",

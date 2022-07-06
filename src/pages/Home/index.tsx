@@ -1,8 +1,21 @@
+import * as S from "./style";
+
 const Home = () => {
     return(
-        <div>
-            Componente Home
-        </div>
+        <S.Home>
+            <S.HomeContent>
+            <header>
+                <S.HomeHeaderDetails>
+                    <div>
+                        <S.HomeHeaderDetailsLogo />
+                    </div>
+                </S.HomeHeaderDetails>
+            </header>
+            <S.HomeDivDetailsRegister>
+                <S.HomeDetailsRegister placeholder="       Email"/><S.HomeBtnDetailsRegister>Avançar</S.HomeBtnDetailsRegister>
+            </S.HomeDivDetailsRegister>    
+            </S.HomeContent>
+        </S.Home>
     );
 }
 
