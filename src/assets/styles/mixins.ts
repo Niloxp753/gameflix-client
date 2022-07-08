@@ -20,7 +20,7 @@ const headingStyle = () => css`
 `;
 
 const bodyStyle = () => css`
-  font-family: ${constants.bodyFontFamiy};
+  font-family: ${constants.bodyFontFamily};
   font-size: ${constants.bodyFontSize};
   line-height: ${constants.bodyLineHeight};
 `;
@@ -87,7 +87,7 @@ const input = () => css`
 
 const inputHome = () => css`
   height: 60px!important;
-  min-width: 450px;
+  min-width: 550px;
   border-radius: 5px 0px 0px 5px;
   background: ${colors.baseInput};
   border: 1px solid ${colors.baseLine};
@@ -105,7 +105,7 @@ const inputBtnHome = () => css`
   text-transform: uppercase;
   color: ${colors.baseInput};
   text-align: center;
-  width: 150px;
+  width: 190px;
   height: 60px;
   border-radius: 0px 5px 5px 0px;
   background: ${colors.quaternaryColor};
@@ -127,6 +127,37 @@ const select = (important = true) => css`
   background-position: 85%;
 `;
 
+const titleHomeH1 = () => css`
+height: 100px;
+width: 837px;
+margin: 0;
+text-align: center;
+font-weight: 900;
+-webkit-text-stroke: 1px black;
+font-size: 50px;
+color: ${colors.baseInput};
+`;
+
+const titleHomeH2 = () => css`
+height: 80px;
+width: 820px;
+margin: 0;
+text-align: center;
+font-weight: 700;
+-webkit-text-stroke: 1px black;
+font-size: 40px;
+color: ${colors.baseInput};
+`;
+
+const titleHomeH3 = () => css`
+height: 40px;
+width: 830px;
+text-align: center;
+font-weight: 700;
+-webkit-text-stroke: 0.8px black;
+font-size: 20px;
+color: ${colors.baseInput};
+`;
 export const mixins = {
   bodyStyle,
   buttonFilled,
@@ -138,4 +169,7 @@ export const mixins = {
   inputBtnHome,
   logoStyle,
   select,
+  titleHomeH1,
+  titleHomeH2,
+  titleHomeH3,
 };

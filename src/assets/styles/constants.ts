@@ -9,7 +9,7 @@ export const constants = {
   headingFontSize: "24px",
   headingLineHeight: "140%",
 
-  bodyFontFamiy: "Poppins Black",
+  bodyFontFamily: "Poppins Black",
   bodyFontSize: "14px",
   bodyLineHeight: "140%",
 };

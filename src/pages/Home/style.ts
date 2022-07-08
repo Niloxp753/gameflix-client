@@ -82,3 +82,25 @@ export const HomeBtnDetailsRegister = styled.button`
     padding-right: 0;
   `}
 `;
+
+export const HomeTitleH1 = styled.h1`
+	${({ theme }) => css`
+    margin: 0;
+		${theme.mixins.titleHomeH1()};
+	`}
+`;
+
+export const HomeTitleH2 = styled.h2`
+	${({ theme }) => css`
+    margin: 0;
+		${theme.mixins.titleHomeH2()};
+	`}
+`;
+
+export const HomeTitleH3 = styled.h3`
+	${({ theme }) => css`
+    margin: 0;
+		${theme.mixins.titleHomeH3()};
+	`}
+`;
+
