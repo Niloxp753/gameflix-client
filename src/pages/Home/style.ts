@@ -89,6 +89,7 @@ export const HomeDetailsRegister = styled.input`
 
 export const HomeBtnDetailsRegister = styled.button`
   ${({ theme }) => css`
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;

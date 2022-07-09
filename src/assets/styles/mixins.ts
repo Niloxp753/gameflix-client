@@ -3,6 +3,7 @@ import { colors } from "assets/styles/colors";
 import { constants } from "assets/styles/constants";
 import down from "assets/icons/down-input.png";
 import Logo from "assets/imgs/logo.png";
+import btnReturn from "assets/icons/return.png";
 
 const logoStyle = () => css`
   background-image: url(${Logo});
@@ -75,9 +76,9 @@ const buttonIcon = (active = false) => css`
 `;
 
 const input = () => css`
-  height: 55px;
+  height: 60px;
   border-radius: 5px;
-  padding: 14px;
+  width: 320px;
   background: ${colors.baseInput};
   border: 1px solid ${colors.baseLine};
   box-sizing: border-box;
@@ -107,6 +108,26 @@ const inputBtnHome = () => css`
   height: 60px;
   border-radius: 5px;
   background: ${colors.quaternaryColor};
+  border: 1px solid ${colors.baseLine};
+  box-sizing: border-box;
+  cursor: pointer;
+`;
+
+const inputBtnLogin = () => css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-style: uppercase;
+  text-transform: uppercase;
+  color: ${colors.textDark};
+  text-align: center;
+  width: 190px;
+  height: 60px;
+  border-radius: 5px;
+  background: ${colors.secondaryColor};
   border: 1px solid ${colors.baseLine};
   box-sizing: border-box;
   cursor: pointer;
@@ -158,25 +179,33 @@ const titleHomeH3 = () => css`
 `;
 
 const loginForm = () => css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 608px;
-    height: 801px;
-    border-radius: 0px 0px 16px 16px;
-    background-color: ${colors.baseFormLogin};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 608px;
+  height: 801px;
+  border-radius: 0px 0px 16px 16px;
+  background-color: ${colors.baseFormLogin};
 `;
 
 export const loginContentTextForm = () => css`
   color: ${colors.textColor};
   font-family: ${constants.headingFontFamiy};
-`
+`;
 export const loginContentForm = () => css`
   display: flex;
   flex-direction: column;
   width: 290px;
   height: 450px;
-`
+  gap: 25px;
+`;
+
+export const returnBtn = () => css`
+  background-image: url(${ btnReturn });
+  background-repeat: no-repeat;
+  background-position: left;
+
+`;
 
 export const mixins = {
   bodyStyle,
@@ -195,4 +224,6 @@ export const mixins = {
   loginForm,
   loginContentTextForm,
   loginContentForm,
+  inputBtnLogin,
+  returnBtn,
 };

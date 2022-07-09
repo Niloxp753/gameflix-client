@@ -3,6 +3,8 @@ import bgPadrao from "assets/imgs/bg-padrao.jpg";
 import logoForm from "assets/imgs/logo-form.png";
 import { colors } from "assets/styles/colors";
 import { mixins } from "assets/styles/mixins";
+import iconEmail from "assets/icons/email-input.png";
+import iconPassword from "assets/icons/password-input.png";
 
 export const Login = styled.section`
   ${({ theme }) => css`
@@ -88,7 +90,7 @@ export const LoginBtnDetails = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    ${theme.mixins.inputBtnHome()};
+    ${theme.mixins.inputBtnLogin()};
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
@@ -109,7 +111,6 @@ export const LoginTitleH1 = styled.h1`
     margin: 0;
     font-size: x-large;
     font-weight: 700;
-    height: 60px;
     ${theme.mixins.loginContentTextForm()};
   `}
 `;
@@ -121,4 +122,56 @@ export const LoginTitleH2 = styled.h2`
     font-size: medium;
     ${theme.mixins.loginContentTextForm()};
   `}
+`;
+
+export const LoginEmailInput = styled.input`
+  ${({ theme }) => css`
+    ${theme.mixins.input()};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    padding: 14px;
+    outline-style: none;
+    ::placeholder {
+      background-image: url(${iconEmail});
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      font-size: larger;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  `}
+`;
+
+export const LoginPasswordInput = styled.input`
+  ${({ theme }) => css`
+    ${theme.mixins.input()};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    padding: 14px;
+    outline-style: none;
+    ::placeholder {
+      background-image: url(${iconPassword});
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      font-size: larger;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  `}
+`;
+
+export const LoginBtnReturn = styled.div`
+  ${({ theme }) => css`
+    ${theme.mixins.returnBtn()};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    outline-style: none;
+    cursor: pointer;
+  `};
 `;
