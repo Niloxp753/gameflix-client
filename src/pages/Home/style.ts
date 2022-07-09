@@ -2,16 +2,30 @@ import styled, { css } from "styled-components";
 import bgHome from "assets/imgs/bg-home.jpg";
 import iconEmail from "assets/icons/email-input.png";
 
-export const Home = styled.section`
+export const Home = styled.body`
   ${({ theme }) => css`
-    background-image: url(${bgHome});
+    background: rgba(0, 0, 0, 0.7) url(${bgHome});
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 100vw;
+    background-blend-mode: darken;
+    min-width: 100%;
     min-height: 100vh;
     color: ${theme.colors.textColor};
     display: flex;
+    align-items: stretch;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+
+  `}
+`;
+
+export const HomeHeader = styled.header`
+  ${() => css`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   `}
 `;
 
@@ -21,7 +35,7 @@ export const HomeContent = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 450px);
+    width: calc(100% - 150px);
     padding: 20px;
     overflow: auto;
     height: 100vh;
@@ -32,7 +46,9 @@ export const HomeContent = styled.main`
 export const HomeHeaderDetails = styled.div`
   ${() => css`
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    margin: 30px;
   `}
 `;
 

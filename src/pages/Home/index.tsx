@@ -3,16 +3,19 @@ import * as S from "./style";
 const Home = () => {
   return (
     <S.Home>
-      <S.HomeContent>
-        <header>
+       <S.HomeHeader>
           <S.HomeHeaderDetails>
             <div>
               <S.HomeHeaderDetailsLogo />
             </div>
+            <div>
+              <S.HomeBtnDetailsRegister>Login</S.HomeBtnDetailsRegister>
+            </div>
           </S.HomeHeaderDetails>
-        </header>
+        </S.HomeHeader>
+      <S.HomeContent>
         <div>
-          <S.HomeTitleH1>Gameplays, trailers e muito mais.</S.HomeTitleH1>
+          <S.HomeTitleH1>Gameplays, trailers e muito mais. Sem limites.</S.HomeTitleH1>
           <S.HomeTitleH2>Assista onde quiser. Quando quiser.</S.HomeTitleH2>
           <S.HomeTitleH3>
             pronto para assistir? informe seu email e clique em avançar para

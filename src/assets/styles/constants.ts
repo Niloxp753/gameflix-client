@@ -1,15 +1,13 @@
 export const constants = {
-  logoPosition: "absolute",
+  logoPosition: "relative",
   logoWidth: "390px",
   logoHeight: "60px",
-  logoLeft: "45px",
-  logoTop: "40px",
 
-  headingFontFamiy: "Poppins Black",
+  headingFontFamiy: "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
   headingFontSize: "24px",
   headingLineHeight: "140%",
 
-  bodyFontFamily: "Poppins Black",
+  bodyFontFamily: "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
   bodyFontSize: "14px",
   bodyLineHeight: "140%",
 };

@@ -9,8 +9,7 @@ const logoStyle = () => css`
   position: ${constants.logoPosition};
   width: ${constants.logoWidth};
   height: ${constants.logoHeight};
-  left: ${constants.logoLeft};
-  top: ${constants.logoTop};
+  
 `;
 
 const headingStyle = () => css`
@@ -107,7 +106,7 @@ const inputBtnHome = () => css`
   text-align: center;
   width: 190px;
   height: 60px;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
   background: ${colors.quaternaryColor};
   border: 1px solid ${colors.baseLine};
   box-sizing: border-box;
@@ -128,12 +127,12 @@ const select = (important = true) => css`
 `;
 
 const titleHomeH1 = () => css`
-height: 100px;
+height: 120px;
 width: 837px;
 margin: 0;
 text-align: center;
-font-weight: 900;
--webkit-text-stroke: 1px black;
+font-weight: 700;
+font-family: ${constants.bodyFontFamily};
 font-size: 50px;
 color: ${colors.baseInput};
 `;
@@ -143,8 +142,8 @@ height: 80px;
 width: 820px;
 margin: 0;
 text-align: center;
-font-weight: 700;
--webkit-text-stroke: 1px black;
+font-weight: 500;
+font-family: ${constants.bodyFontFamily};
 font-size: 40px;
 color: ${colors.baseInput};
 `;
@@ -153,8 +152,8 @@ const titleHomeH3 = () => css`
 height: 40px;
 width: 830px;
 text-align: center;
-font-weight: 700;
--webkit-text-stroke: 0.8px black;
+font-weight: 400;
+font-family: ${constants.bodyFontFamily};
 font-size: 20px;
 color: ${colors.baseInput};
 `;
