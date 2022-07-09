@@ -9,7 +9,6 @@ const logoStyle = () => css`
   position: ${constants.logoPosition};
   width: ${constants.logoWidth};
   height: ${constants.logoHeight};
-  
 `;
 
 const headingStyle = () => css`
@@ -85,7 +84,7 @@ const input = () => css`
 `;
 
 const inputHome = () => css`
-  height: 60px!important;
+  height: 60px !important;
   min-width: 550px;
   border-radius: 5px 0px 0px 5px;
   background: ${colors.baseInput};
@@ -127,36 +126,58 @@ const select = (important = true) => css`
 `;
 
 const titleHomeH1 = () => css`
-height: 120px;
-width: 837px;
-margin: 0;
-text-align: center;
-font-weight: 700;
-font-family: ${constants.bodyFontFamily};
-font-size: 50px;
-color: ${colors.baseInput};
+  height: 120px;
+  width: 837px;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-family: ${constants.bodyFontFamily};
+  font-size: 50px;
+  color: ${colors.baseInput};
 `;
 
 const titleHomeH2 = () => css`
-height: 80px;
-width: 820px;
-margin: 0;
-text-align: center;
-font-weight: 500;
-font-family: ${constants.bodyFontFamily};
-font-size: 40px;
-color: ${colors.baseInput};
+  height: 80px;
+  width: 820px;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  font-family: ${constants.bodyFontFamily};
+  font-size: 40px;
+  color: ${colors.baseInput};
 `;
 
 const titleHomeH3 = () => css`
-height: 40px;
-width: 830px;
-text-align: center;
-font-weight: 400;
-font-family: ${constants.bodyFontFamily};
-font-size: 20px;
-color: ${colors.baseInput};
+  height: 40px;
+  width: 830px;
+  text-align: center;
+  font-weight: 400;
+  font-family: ${constants.bodyFontFamily};
+  font-size: 20px;
+  color: ${colors.baseInput};
 `;
+
+const loginForm = () => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 608px;
+    height: 801px;
+    border-radius: 0px 0px 16px 16px;
+    background-color: ${colors.baseFormLogin};
+`;
+
+export const loginContentTextForm = () => css`
+  color: ${colors.textColor};
+  font-family: ${constants.headingFontFamiy};
+`
+export const loginContentForm = () => css`
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 450px;
+`
+
 export const mixins = {
   bodyStyle,
   buttonFilled,
@@ -171,4 +192,7 @@ export const mixins = {
   titleHomeH1,
   titleHomeH2,
   titleHomeH3,
+  loginForm,
+  loginContentTextForm,
+  loginContentForm,
 };

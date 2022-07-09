@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components";
-import bgHome from "assets/imgs/bg-home.jpg";
-import iconEmail from "assets/icons/email-input.png";
+import bgPadrao from "assets/imgs/bg-padrao.jpg";
+import logoForm from "assets/imgs/logo-form.png";
+import { colors } from "assets/styles/colors";
+import { mixins } from "assets/styles/mixins";
 
-export const Home = styled.section`
+export const Login = styled.section`
   ${({ theme }) => css`
-    background: rgba(0, 0, 0, 0.7) url(${bgHome});
+    background: rgba(0, 0, 0, 0.7) url(${bgPadrao});
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: darken;
@@ -17,19 +19,10 @@ export const Home = styled.section`
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-
   `}
 `;
 
-export const HomeHeader = styled.header`
-  ${() => css`
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  `}
-`;
-
-export const HomeContent = styled.main`
+export const LoginContent = styled.main`
   ${() => css`
     display: flex;
     flex-direction: column;
@@ -43,31 +36,34 @@ export const HomeContent = styled.main`
   `}
 `;
 
-export const HomeHeaderDetails = styled.div`
-  ${() => css`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 30px;
-  `}
-`;
-
-export const HomeHeaderDetailsLogo = styled.h1`
+export const LoginDetailsLogo = styled.h1`
   ${({ theme }) => css`
     ${theme.mixins.logoStyle};
     margin: 0;
   `}
 `;
-
-export const HomeDivDetailsRegister = styled.div`
+export const LoginHeaderForm = styled.header`
   ${() => css`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 608px;
+    height: 350px;
+    border-radius: 16px 16px 0px 0px;
+    background-image: url(${logoForm});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: ${colors.secondaryColor};
   `}
 `;
 
-export const HomeDetailsRegister = styled.input`
+export const LoginBodyForm = styled.form`
+  ${() => css`
+    ${mixins.loginForm}
+  `}
+`;
+
+export const LoginDetailsForm = styled.input`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;
@@ -77,7 +73,7 @@ export const HomeDetailsRegister = styled.input`
     padding: 14px;
     outline-style: none;
     ::placeholder {
-      background-image: url(${iconEmail});
+      background-image: url();
       background-repeat: no-repeat;
       background-position: 0px -2px;
       font-size: large;
@@ -87,7 +83,7 @@ export const HomeDetailsRegister = styled.input`
   `}
 `;
 
-export const HomeBtnDetailsRegister = styled.button`
+export const LoginBtnDetails = styled.button`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;
@@ -99,24 +95,30 @@ export const HomeBtnDetailsRegister = styled.button`
   `}
 `;
 
-export const HomeTitleH1 = styled.h1`
-	${({ theme }) => css`
-    margin: 0;
-		${theme.mixins.titleHomeH1()};
-	`}
+export const LoginContentFormInput = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    ${theme.mixins.loginContentForm()};
+  `}
 `;
 
-export const HomeTitleH2 = styled.h2`
-	${({ theme }) => css`
+export const LoginTitleH1 = styled.h1`
+  ${({ theme }) => css`
     margin: 0;
-		${theme.mixins.titleHomeH2()};
-	`}
+    font-size: x-large;
+    font-weight: 700;
+    height: 60px;
+    ${theme.mixins.loginContentTextForm()};
+  `}
 `;
 
-export const HomeTitleH3 = styled.h3`
-	${({ theme }) => css`
+export const LoginTitleH2 = styled.h2`
+  ${({ theme }) => css`
     margin: 0;
-		${theme.mixins.titleHomeH3()};
-	`}
+    font-weight: 500;
+    font-size: medium;
+    ${theme.mixins.loginContentTextForm()};
+  `}
 `;
-
