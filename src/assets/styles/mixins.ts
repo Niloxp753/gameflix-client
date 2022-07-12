@@ -133,6 +133,15 @@ const inputBtnLogin = () => css`
   cursor: pointer;
 `;
 
+const inputCadastro = () => css`
+  height: 48px;
+  border-radius: 5px;
+  width: 410px;
+  background: ${colors.baseInput};
+  border: 1px solid ${colors.baseLine};
+  box-sizing: border-box;
+`;
+
 const select = (important = true) => css`
   ${input()};
   ${bodyStyle()};
@@ -188,11 +197,11 @@ const loginForm = () => css`
   background-color: ${colors.baseFormLogin};
 `;
 
-export const loginContentTextForm = () => css`
+const loginContentTextForm = () => css`
   color: ${colors.textColor};
   font-family: ${constants.headingFontFamiy};
 `;
-export const loginContentForm = () => css`
+const loginContentForm = () => css`
   display: flex;
   flex-direction: column;
   width: 290px;
@@ -200,11 +209,28 @@ export const loginContentForm = () => css`
   gap: 25px;
 `;
 
-export const returnBtn = () => css`
-  background-image: url(${ btnReturn });
+const cadastroContentForm = () => css`
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  height: 600px;
+  gap: 15px;
+`;
+
+const returnBtn = () => css`
+  background-image: url(${btnReturn});
   background-repeat: no-repeat;
   background-position: left;
+`;
 
+const registerForm = () => css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 608px;
+  height: 801px;
+  border-radius: 0px 0px 16px 16px;
+  background-color: ${colors.baseFormCad};
 `;
 
 export const mixins = {
@@ -226,4 +252,7 @@ export const mixins = {
   loginContentForm,
   inputBtnLogin,
   returnBtn,
+  registerForm,
+  cadastroContentForm,
+  inputCadastro,
 };

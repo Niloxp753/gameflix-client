@@ -28,8 +28,10 @@ const Home = () => {
           </S.HomeTitleH3>
         </div>
         <S.HomeDivDetailsRegister>
-          <S.HomeDetailsRegister placeholder="       Email" />
-          <S.HomeBtnDetailsRegister>Avançar</S.HomeBtnDetailsRegister>
+          <S.HomeDetailsRegister placeholder="       Email" type={"text"}/>
+          <Link to={"/register"} style={{ textDecoration: "none" }}>
+            <S.HomeBtnDetailsRegister>Avançar</S.HomeBtnDetailsRegister>
+          </Link>
         </S.HomeDivDetailsRegister>
       </S.HomeContent>
     </S.Home>
