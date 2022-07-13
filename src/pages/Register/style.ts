@@ -164,27 +164,13 @@ export const RegisterImageLabel = styled.label`
     font-size: large;
     font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
   `}
 `;
 
 export const RegisterImageInput = styled.input`
-  ${({ theme }) => css`
-    ${theme.mixins.inputCadastro()};
+  ${() => css`
     display: none;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-    padding: 14px;
-    outline-style: none;
-    ::placeholder {
-      background-image: url(${iconImage});
-      background-repeat: no-repeat;
-      background-position: 0px 0px;
-      background-size: contain;
-      font-size: large;
-      font-weight: 400;
-      font-family: Arial, Helvetica, sans-serif;
-    }
   `}
 `;
 
