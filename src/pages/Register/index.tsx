@@ -19,7 +19,11 @@ const Register = () => {
               type={"text"}
             ></S.RegisterEmailInput>
             <S.RegisterImageLabel>
-              Imagem <S.RegisterImageInput placeholder="Imagem" type={"file"}></S.RegisterImageInput>
+              Imagem{" "}
+              <S.RegisterImageInput
+                placeholder="Imagem"
+                type={"file"}
+              ></S.RegisterImageInput>
             </S.RegisterImageLabel>
             <S.RegisterCpfInput
               placeholder="       CPF"
@@ -33,7 +37,9 @@ const Register = () => {
               placeholder="       Confirmar Senha"
               type={"password"}
             ></S.RegisterConfirmPasswordInput>
-            <S.RegisterBtnDetails>Cadastrar</S.RegisterBtnDetails>
+            <Link to={"/profile"} style={{ textDecoration: "none" }}>
+              <S.RegisterBtnDetails>Cadastrar</S.RegisterBtnDetails>
+            </Link>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <S.RegisterBtnReturn></S.RegisterBtnReturn>
             </Link>

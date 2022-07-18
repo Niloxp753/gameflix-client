@@ -4,6 +4,7 @@ import { constants } from "assets/styles/constants";
 import down from "assets/icons/down-input.png";
 import Logo from "assets/imgs/logo.png";
 import btnReturn from "assets/icons/return.png";
+import profileCreate from "assets/icons/profile-create.png";
 
 const logoStyle = () => css`
   background-image: url(${Logo});
@@ -88,6 +89,15 @@ const inputHome = () => css`
   height: 60px !important;
   min-width: 550px;
   border-radius: 5px 0px 0px 5px;
+  background: ${colors.baseInput};
+  border: 1px solid ${colors.baseLine};
+  box-sizing: border-box;
+`;
+
+const inputHomepageSearch = () => css`
+  height: 60px !important;
+  width: 100%;
+  border-radius: 5px;
   background: ${colors.baseInput};
   border: 1px solid ${colors.baseLine};
   box-sizing: border-box;
@@ -209,6 +219,37 @@ const loginContentForm = () => css`
   gap: 25px;
 `;
 
+const profileBodyContent = () => css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 850px;
+  height: 800px;
+  border-radius: 0px 0px 16px 16px;
+  background-color: ${colors.baseFormLogin};
+`;
+
+const profileCardBodyContent = () => css`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 850px;
+  height: 300px;
+`;
+
+const profileCardItem = () => css`
+  background-image: url(${profileCreate});
+  margin: 10px;
+  width: 160px;
+  height: 165px;
+  background-size: contain;
+  background-repeat: no-repeat;
+`;
+
 const cadastroContentForm = () => css`
   display: flex;
   flex-direction: column;
@@ -255,4 +296,8 @@ export const mixins = {
   registerForm,
   cadastroContentForm,
   inputCadastro,
+  profileBodyContent,
+  profileCardItem,
+  profileCardBodyContent,
+  inputHomepageSearch,
 };

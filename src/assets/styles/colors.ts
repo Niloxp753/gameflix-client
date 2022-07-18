@@ -4,7 +4,7 @@ export const colors = {
   tertiaryColor: "#888585",
   quaternaryColor: "#6930C3",
 
-  primaryColorOpacity: "#25252536",
+  primaryColorOpacity: "#25252565",
   
   shadowColor: "#00000025",
 

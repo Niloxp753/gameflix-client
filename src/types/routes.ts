@@ -2,6 +2,8 @@ export enum RoutePath {
     HOME = '/',
     LOGIN = '/login',
     REGISTER = '/register',
+    PROFILE = '/profile',
+    HOMEPAGE = '/homepage',
     SETTINGS = '/settings',
     SETTINGS_GAMES = 'games',
     SETTINGS_GENRES = 'genres',

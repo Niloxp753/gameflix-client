@@ -1,6 +1,6 @@
 export const constants = {
   logoPosition: "relative",
-  logoWidth: "390px",
+  logoWidth: "400px",
   logoHeight: "60px",
 
   headingFontFamiy: "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",

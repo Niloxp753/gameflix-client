@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import bgPadrao from "assets/imgs/bg-padrao.jpg";
-import logoForm from "assets/imgs/logo-form.png";
 import { colors } from "assets/styles/colors";
 import { mixins } from "assets/styles/mixins";
 import iconEmail from "assets/icons/email-input.png";
@@ -52,7 +51,6 @@ export const LoginHeaderForm = styled.header`
     width: 608px;
     height: 350px;
     border-radius: 16px 16px 0px 0px;
-    background-image: url(${logoForm});
     background-position: center;
     background-repeat: no-repeat;
     background-color: ${colors.secondaryColor};
