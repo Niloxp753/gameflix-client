@@ -148,29 +148,25 @@ export const RegisterEmailInput = styled.input`
     }
   `}
 `;
-export const RegisterImageLabel = styled.label`
-  ${({ theme }) => css`
-    ${theme.mixins.inputCadastro()};
-    color: ${colors.textNeutral};
-    display: flex;
-    justify-content: ;
-    align-items: center;
-    padding-left: 50px;
-    outline-style: none;
-    background-image: url(${iconImage});
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    background-size: 7%;
-    font-size: large;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-  `}
-`;
 
 export const RegisterImageInput = styled.input`
-  ${() => css`
-    display: none;
+  ${({ theme }) => css`
+    ${theme.mixins.inputCadastro()};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    padding: 14px;
+    outline-style: none;
+    ::placeholder {
+      background-image: url(${iconImage});
+      background-repeat: no-repeat;
+      background-position: 0px -1px;
+      background-size: contain;
+      font-size: large;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+    }
   `}
 `;
 

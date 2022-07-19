@@ -60,7 +60,9 @@ const Login = (props: any) => {
               id="password"
               onChange={handleChangeValues}
             />
+            <Link to={"/profile"} style={{ textDecoration: "none" }}>
               <S.LoginBtnDetails>Entrar</S.LoginBtnDetails>
+            </Link>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <S.LoginBtnReturn></S.LoginBtnReturn>
             </Link>

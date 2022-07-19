@@ -6,7 +6,7 @@ export interface userLoginObj {
   password: string;
 }
 
-export interface userObj {
+export interface useRegister {
   name: string;
   email: string;
   password: string;
@@ -25,7 +25,7 @@ export const loginService = {
 };
 
 export const registerService = {
-  registerValues: (values: userObj) =>
+  registerValues: (values: useRegister) =>
     api
       .post("/user/create", values)
       .then((response: any) => response)

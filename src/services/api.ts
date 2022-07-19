@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://gameflix-server.herokuapp.com/api/#",
+  baseURL: "https://gameflix-server.herokuapp.com/",
 });
 
 api.interceptors.request.use((config: any) => {
