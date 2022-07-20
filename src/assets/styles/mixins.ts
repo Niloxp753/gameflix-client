@@ -5,6 +5,7 @@ import down from "assets/icons/down-input.png";
 import Logo from "assets/imgs/logo.png";
 import btnReturn from "assets/icons/return.png";
 import profileCreate from "assets/icons/profile-create.png";
+import btnLogout from "assets/icons/logout.png"
 
 const logoStyle = () => css`
   background-image: url(${Logo});
@@ -221,33 +222,47 @@ const loginContentForm = () => css`
 
 const profileBodyContent = () => css`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 850px;
+  min-width: 850px;
   height: 800px;
   border-radius: 0px 0px 16px 16px;
   background-color: ${colors.baseFormLogin};
+  gap: 10px;
 `;
 
 const profileCardBodyContent = () => css`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  width: 850px;
-  height: 300px;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  border: 2px solid #ffffff;
 `;
 
-const profileCardItem = () => css`
-  background-image: url(${profileCreate});
-  margin: 10px;
+const profileCardBodyContentCreate = () => css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 160px;
-  height: 165px;
+  height: 160px;
+  border-radius: 100%;
+  border: 2px solid #ffffff;
+`;
+
+const profileCardCreate = () => css`
+  background-image: url(${profileCreate});
   background-size: contain;
   background-repeat: no-repeat;
+  width: 160px;
+  height: 160px;
 `;
 
 const cadastroContentForm = () => css`
@@ -260,6 +275,12 @@ const cadastroContentForm = () => css`
 
 const returnBtn = () => css`
   background-image: url(${btnReturn});
+  background-repeat: no-repeat;
+  background-position: left;
+`;
+
+const logoutBtn = () => css`
+  background-image: url(${btnLogout});
   background-repeat: no-repeat;
   background-position: left;
 `;
@@ -293,11 +314,13 @@ export const mixins = {
   loginContentForm,
   inputBtnLogin,
   returnBtn,
+  logoutBtn,
   registerForm,
   cadastroContentForm,
   inputCadastro,
   profileBodyContent,
-  profileCardItem,
+  profileCardCreate,
   profileCardBodyContent,
   inputHomepageSearch,
+  profileCardBodyContentCreate,
 };

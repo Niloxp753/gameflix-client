@@ -62,21 +62,54 @@ export const ProfileBodyContent = styled.div`
   `}
 `;
 
-export const ProfileCardContent = styled.div`
+export const ProfileBodyDivContentCards = styled.div`
+  ${() => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    width: 840px;
+    gap: 20px;
+  `}
+`;
+
+export const ProfileCardContent = styled.img`
   ${() => css`
     ${mixins.profileCardBodyContent}
   `}
 `;
 
-export const ProfileIcons = styled.div`
+export const ProfileCardContentCreate = styled.div`
   ${() => css`
-    ${mixins.profileCardItem}
+    ${mixins.profileCardBodyContentCreate}
   `}
 `;
 
-export const ProfileBtnReturn = styled.div`
+export const ProfileIcons = styled.div`
+  ${() => css`
+    ${mixins.profileCardCreate}
+  `}
+`;
+
+export const ProfileDivContentBtn = styled.div`
+  ${() => css`
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    height: 100%;
+  `}
+`;
+
+export const ProfileBtnLogout = styled.div`
   ${({ theme }) => css`
-    ${theme.mixins.returnBtn()};
+    ${theme.mixins.logoutBtn()};
     display: flex;
     justify-content: center;
     align-items: center;

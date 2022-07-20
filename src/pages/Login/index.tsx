@@ -23,15 +23,17 @@ const Login = (props: any) => {
     event.preventDefault();
     const response = await loginService.login(values);
     const jwt = response.data.token;
+    const userId = response.data.user.id;
 
     if (jwt) {
       localStorage.setItem("jwtLocalStorage", jwt);
+      localStorage.setItem("userId", userId);
       swal({
         title: "Seja bem vindo",
         icon: "success",
         timer: 3000,
       });
-      navigate("/");
+      navigate("/profiles");
     }
     console.log(response.data);
   };
@@ -52,6 +54,7 @@ const Login = (props: any) => {
               name="email"
               id="email"
               onChange={handleChangeValues}
+              required
             />
             <S.LoginPasswordInput
               placeholder="       Senha"
@@ -59,10 +62,9 @@ const Login = (props: any) => {
               name="password"
               id="password"
               onChange={handleChangeValues}
+              required
             />
-            <Link to={"/profile"} style={{ textDecoration: "none" }}>
-              <S.LoginBtnDetails>Entrar</S.LoginBtnDetails>
-            </Link>
+              <S.LoginBtnDetails type="submit" >Entrar</S.LoginBtnDetails>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <S.LoginBtnReturn></S.LoginBtnReturn>
             </Link>

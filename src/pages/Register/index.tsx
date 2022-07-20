@@ -54,6 +54,7 @@ const Register = () => {
               name="name"
               id="name"
               onChange={handleChangeValues}
+              required
             ></S.RegisterNameInput>
             <S.RegisterEmailInput
               placeholder="       Email"
@@ -61,6 +62,7 @@ const Register = () => {
               name="email"
               id="email"
               onChange={handleChangeValues}
+              required
             ></S.RegisterEmailInput>
             <S.RegisterImageInput
               placeholder="       Url da imagem"
@@ -68,6 +70,7 @@ const Register = () => {
               name="image"
               id="image"
               onChange={handleChangeValues}
+              required
             ></S.RegisterImageInput>
             <S.RegisterCpfInput
               placeholder="       CPF"
@@ -75,6 +78,7 @@ const Register = () => {
               name="cpf"
               id="cpf"
               onChange={handleChangeValues}
+              required
             ></S.RegisterCpfInput>
             <S.RegisterPasswordInput
               placeholder="       Senha"
@@ -82,6 +86,7 @@ const Register = () => {
               name="password"
               id="password"
               onChange={handleChangeValues}
+              required
             ></S.RegisterPasswordInput>
             <S.RegisterConfirmPasswordInput
               placeholder="       Confirmar Senha"
@@ -89,10 +94,9 @@ const Register = () => {
               name="confirmPassword"
               id="confirmPassword"
               onChange={handleChangeValues}
+              required
             ></S.RegisterConfirmPasswordInput>
-            <Link to={"/profile"} style={{ textDecoration: "none" }}>
-              <S.RegisterBtnDetails>Cadastrar</S.RegisterBtnDetails>
-            </Link>
+              <S.RegisterBtnDetails type="submit">Cadastrar</S.RegisterBtnDetails>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <S.RegisterBtnReturn></S.RegisterBtnReturn>
             </Link>
