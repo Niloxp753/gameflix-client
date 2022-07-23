@@ -4,12 +4,12 @@ import swal from 'sweetalert';
 export interface useProfile {
     id?: string;
     title: string;
-    imageUrl: string;
-    userId: string;
+    imageURL: string;
+    userId?: string;
     user?: {
       name: string;
       email: string;
-      isAdmin: boolean;
+      isAdmin?: boolean;
     };
     games?: [
       {
@@ -22,7 +22,10 @@ export interface useProfile {
         trailerYoutubeUrl: string;
         gameplayYouTubeUrl: string;
       }
-    ];
+    ],
+    _count?: {
+      games: number;
+    }
   }
 
   export const AllProfiles = {
@@ -56,7 +59,7 @@ export interface useProfile {
   
     ProfileGetById: async (id: string) => {
       try {
-        const res = await api.get(`/profile/${id}`);
+        const res = await api.get(`/profiles/${id}`);
         return res
       }
       catch (error: any) {

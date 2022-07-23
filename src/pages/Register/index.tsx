@@ -5,13 +5,14 @@ import swal from "sweetalert";
 import * as S from "./style";
 
 const Register = () => {
-  const [values, setValues] = useState({
+  const [values, setValues] = useState<useRegister>({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
     image: "",
     cpf: "",
+    isAdmin: false
   });
 
   let navigate = useNavigate();
@@ -26,16 +27,14 @@ const Register = () => {
   const handleSubmitRegister = async (event: React.SyntheticEvent) => {
     event.preventDefault();
     const response = await registerService.registerValues(values);
-    const jwt = response.data.token;
 
-    if (jwt) {
-      localStorage.setItem("jwtLocalStorage", jwt);
+    if (response.data) {
       swal({
         title: "Seja bem vindo",
         icon: "success",
         timer: 3000,
       });
-      navigate("/");
+      navigate("/login");
     }
     console.log(response.data);
   };
@@ -44,8 +43,8 @@ const Register = () => {
     <S.Register>
       <S.RegisterContent>
         <S.RegisterHeaderForm />
-        <S.RegisterBodyForm>
-          <S.RegisterContentFormInput onSubmit={handleSubmitRegister}>
+        <S.RegisterBodyForm onSubmit={handleSubmitRegister}>
+          <S.RegisterContentFormInput >
             <S.RegisterTitleH1>Crie a sua conta!</S.RegisterTitleH1>
             <S.RegisterTitleH2>Preencha seus dados:</S.RegisterTitleH2>
             <S.RegisterNameInput

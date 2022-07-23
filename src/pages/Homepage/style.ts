@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import bgHomepage from "assets/imgs/bg-homepage.webp";
 import { colors } from "assets/styles/colors";
 import returnBtn from "assets/icons/return.png";
+import { mixins } from "assets/styles/mixins";
 
 export const Homepage = styled.section`
   ${({ theme }) => css`
@@ -63,19 +64,27 @@ export const HomepageProfileDetails = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.primaryColorOpacity};
     width: 100%;
-    height: 90px;
+    height: 100px;
     border-radius: 0px 10px 10px 0px;
     display: flex;
-    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    flex-direction: row;
     gap: 10px;
     padding-left: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
+  `}
+`;
+
+export const HomepageProfileIcon = styled.img`
+  ${() => css`
+    ${mixins.HomepageProfileImage}
   `}
 `;
 
 export const HomepageBtnDetails = styled.div`
   ${({ theme }) => css`
-    background-image: url(${ returnBtn });
+    background-image: url(${returnBtn});
     background-repeat: no-repeat;
     width: 80%;
     height: 30px;
@@ -83,7 +92,8 @@ export const HomepageBtnDetails = styled.div`
     flex-direction: column;
     gap: 10px;
     padding-left: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
+    cursor: pointer;
   `}
 `;
 
@@ -96,7 +106,7 @@ export const HomepageDivColumn2 = styled.div`
     justify-content: start;
     align-self: start;
     padding-top: 10px;
-    gap: 20px;  
+    gap: 20px;
   `}
 `;
 

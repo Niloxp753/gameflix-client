@@ -234,13 +234,15 @@ const profileBodyContent = () => css`
 `;
 
 const profileCardBodyContent = () => css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
   width: 160px;
   height: 160px;
+  border-radius: 100%;
+  border: 2px solid #ffffff;
+`;
+
+const HomepageProfileImage = () => css`
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
   border: 2px solid #ffffff;
 `;
@@ -323,4 +325,5 @@ export const mixins = {
   profileCardBodyContent,
   inputHomepageSearch,
   profileCardBodyContentCreate,
+  HomepageProfileImage,
 };

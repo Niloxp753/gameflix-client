@@ -75,6 +75,20 @@ export const ProfileBodyDivContentCards = styled.div`
   `}
 `;
 
+export const ProfileDivCardContent = styled.div`
+  ${() => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    width: 165px;
+    height: 185px;
+  `}
+`;
+
+
 export const ProfileCardContent = styled.img`
   ${() => css`
     ${mixins.profileCardBodyContent}
@@ -101,7 +115,6 @@ export const ProfileDivContentBtn = styled.div`
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    
     width: 100%;
     height: 100%;
   `}

@@ -27,7 +27,7 @@ export const loginService = {
 export const registerService = {
   registerValues: (values: useRegister) =>
     api
-      .post("/user/create", values)
+      .post("/user", values)
       .then((response: any) => response)
       .catch((error: any) => error.response),
 };
