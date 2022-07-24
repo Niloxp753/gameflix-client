@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { AllProfiles, useProfile } from "services/profileService";
 import * as S from "./style";
+import { FaUserEdit } from "react-icons/fa";
 
 const Profile = () => {
   const navigate = useNavigate();
 
   const [profiles, setProfiles] = useState<useProfile[]>([]);
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchProfiles = async () => {
@@ -15,19 +17,23 @@ const Profile = () => {
       setProfiles(payload.data);
       console.log(profiles);
     };
-
+    
+    getId()
     fetchProfiles();
-  }, [profiles]);
+  }, []);
+
+  
+  const getId = async () => {
+    if (id) {
+      const res: any = await AllProfiles.ProfileGetById(id);
+      setProfiles(res);
+    }
+  };
 
   const logout = () => {
     localStorage.clear();
     navigate("/");
   };
-
-  // const handleEditProfile = async (id: string) => {
-  //   const GetByIdProfile = await AllProfiles.ProfileGetById(id);
-  //   navigate(`/profiles/edit/${id}`);
-  // };
 
   return (
     <S.Profile>
@@ -44,7 +50,10 @@ const Profile = () => {
                   onClick={() => navigate(`/profile/homepage/${profile.id}`)}
                   alt="Avatar do usuário"
                 ></S.ProfileCardContent>
-                {profile.title}
+                <S.ProfileTitle>{profile.title}</S.ProfileTitle>
+                <S.ProfileCardCEdit>
+                  <FaUserEdit onClick={()=>navigate(`/profiles/${profile.id}`)}/>
+                </S.ProfileCardCEdit>
               </S.ProfileDivCardContent>
             ))}
             <S.ProfileCardContentCreate>

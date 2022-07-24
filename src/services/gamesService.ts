@@ -2,6 +2,7 @@ import api from "./api";
 import swal from "sweetalert";
 
 export interface useGame {
+  id?: string;
   title: string;
   coverImageUrl: string;
   description: string;
@@ -13,7 +14,7 @@ export interface useGame {
 }
 
 export const AllGames = {
-  ProfilesUser: async () => {
+  GamesProfile: async () => {
     try {
       const res = await api.get("/games", { method: "GET" });
       return res;

@@ -5,7 +5,7 @@ import down from "assets/icons/down-input.png";
 import Logo from "assets/imgs/logo.png";
 import btnReturn from "assets/icons/return.png";
 import profileCreate from "assets/icons/profile-create.png";
-import btnLogout from "assets/icons/logout.png"
+import btnLogout from "assets/icons/logout.png";
 
 const logoStyle = () => css`
   background-image: url(${Logo});
@@ -245,6 +245,9 @@ const HomepageProfileImage = () => css`
   height: 80px;
   border-radius: 100%;
   border: 2px solid #ffffff;
+  :hover {
+    border: 2px solid #000000;
+  }
 `;
 
 const profileCardBodyContentCreate = () => css`

@@ -4,29 +4,46 @@ import favorite from "assets/icons/heart-favorite.png";
 
 export const CardGamesContent = styled.section`
   ${() => css`
-    background-color: #000000;
-    height: 220px;
-    width: 195px;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+  `}
+`;
+
+export const CardGamesDivContent = styled.div`
+  ${() => css`
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+  `}
+`;
+
+export const CardGamesImgBg = styled.img`
+  ${() => css`
+    height: 220px;
+    width: 194px;
     border-radius: 15px;
   `}
 `;
 
 export const CardGamesDivDetailsScore = styled.div`
   ${() => css`
-    background-repeat: no-repeat;
-    height: 110px;
+    height: 550px;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 11px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
   `}
 `;
 
@@ -51,7 +68,6 @@ export const CardGamesDivDetailsFavorite = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  
   `}
 `;
 

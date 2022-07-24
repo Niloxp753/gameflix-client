@@ -2,7 +2,7 @@ export const games = [
   {
     id: "db005519-52fc-4f5c-a6fd-6a8dbbc93c79",
     title: "God Of War",
-    coverImageUrl: "https://images6.alphacoders.com/900/900070.jpg",
+    coverImageUrl: "https://blogger.googleusercontent.com/img/a/AVvXsEgwyDJOdLYZFpYvmAk-z06XdBCANCfqIzz_-KXwDhyp4zh-kwD04nVI9UaQBarRdzaL_M4PR9zaWnx4nQji2waIB6BYJwFRRDi_DQSOAqq2z8Nqcuw8W5tS7Bn-2BjKH6oEEbLi-LgMMypRykue3kdRWUhTtWkvn9OBFf2eEZSNN35V7mWuOnYNQSI=s2560",
     description:
       "Baseada em distintas mitologias, a história segue Kratos, um guerreiro espartano que foi levado a matar sua família por seu antigo mestre, o deus da guerra Ares.",
     year: 2018,

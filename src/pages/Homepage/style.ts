@@ -1,8 +1,7 @@
-import styled, { css } from "styled-components";
 import bgHomepage from "assets/imgs/bg-homepage.webp";
 import { colors } from "assets/styles/colors";
-import returnBtn from "assets/icons/return.png";
 import { mixins } from "assets/styles/mixins";
+import styled, { css } from "styled-components";
 
 export const Homepage = styled.section`
   ${({ theme }) => css`
@@ -15,6 +14,7 @@ export const Homepage = styled.section`
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    overflow-y: hidden;
   `}
 `;
 
@@ -40,7 +40,7 @@ export const HomepageLogo = styled.div`
 export const HomepageMainDetails = styled.main`
   ${() => css`
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,20 +79,6 @@ export const HomepageProfileDetails = styled.div`
 export const HomepageProfileIcon = styled.img`
   ${() => css`
     ${mixins.HomepageProfileImage}
-  `}
-`;
-
-export const HomepageBtnDetails = styled.div`
-  ${({ theme }) => css`
-    background-image: url(${returnBtn});
-    background-repeat: no-repeat;
-    width: 80%;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 10px;
-    color: #ffffff;
     cursor: pointer;
   `}
 `;
@@ -123,12 +109,12 @@ export const HomepageInputSearch = styled.input`
 export const HomepageDivTextGames = styled.div`
   ${() => css`
     width: 40%;
-    height: 40px;
+    height: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   `}
 `;
 
@@ -151,18 +137,6 @@ export const HomepageGamesFavorite = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-  `}
-`;
-
-export const HomepageGamesCardList = styled.div`
-  ${() => css`
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
   `}
 `;
 

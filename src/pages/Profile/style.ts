@@ -68,7 +68,7 @@ export const ProfileBodyDivContentCards = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 20px;
     flex-wrap: wrap;
     width: 840px;
     gap: 20px;
@@ -78,11 +78,11 @@ export const ProfileBodyDivContentCards = styled.div`
 export const ProfileDivCardContent = styled.div`
   ${() => css`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 165px;
     height: 185px;
   `}
@@ -92,6 +92,20 @@ export const ProfileDivCardContent = styled.div`
 export const ProfileCardContent = styled.img`
   ${() => css`
     ${mixins.profileCardBodyContent}
+  `}
+`;
+
+export const ProfileTitle = styled.text`
+  ${() => css`
+    font-size: 1.2rem;
+    color: #ffffff;
+  `}
+`;
+
+export const ProfileCardCEdit = styled.i`
+  ${() => css`
+    font-size: 2rem;
+    color: #000000;
   `}
 `;
 
