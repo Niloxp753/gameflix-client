@@ -27,4 +27,60 @@ export const AllGames = {
       });
     }
   },
+  
+  GameById: async (id: string) => {
+    try {
+      const res = await api.get(`/games/${id}`);
+      return res;
+    } catch (error: any) {
+      swal({
+        title: "Error",
+        text: `${error.message}`,
+        icon: "error",
+        timer: 6000,
+      });
+    }
+  },
+
+  CreateGame: async (game: useGame) => {
+    try {
+      const res = await api.post("/games", game);
+      return res;
+    } catch (error: any) {
+      swal({
+        title: "Error",
+        text: `${error.message}`,
+        icon: "error",
+        timer: 6000,
+      });
+    }
+  },
+
+  EditGame: async (id: string, game: useGame) => {
+    try {
+      const res = await api.patch(`/games/${id}`, game);
+      return res;
+    } catch (error: any) {
+      swal({
+        title: "Error",
+        text: `${error.message}`,
+        icon: "error",
+        timer: 6000,
+      });
+    }
+  },
+
+  DeleteGame: async (id: string) => {
+    try {
+      const res = await api.delete(`/games/${id}`);
+      return res;
+    } catch (error: any) {
+      swal({
+        title: "Error",
+        text: `${error.message}`,
+        icon: "error",
+        timer: 6000,
+      });
+    }
+  },
 };
