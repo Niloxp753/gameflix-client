@@ -6,6 +6,7 @@ export interface useProfile {
     title: string;
     imageURL: string;
     userId?: string;
+    gameId?: string;
     user?: {
       name: string;
       email: string;
@@ -45,7 +46,7 @@ export interface useProfile {
   
     CreateProfile: async (profile: useProfile) => {
       try {
-        const res = await api.post("/profile", profile);
+        const res = await api.post("/profiles", profile);
         return res;
       } catch (error: any) {
         swal({

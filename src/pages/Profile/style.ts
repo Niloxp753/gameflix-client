@@ -68,7 +68,6 @@ export const ProfileBodyDivContentCards = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
     flex-wrap: wrap;
     width: 840px;
     gap: 20px;
@@ -79,12 +78,11 @@ export const ProfileDivCardContent = styled.div`
   ${() => css`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 10px;
     flex-wrap: nowrap;
     width: 165px;
-    height: 185px;
+    height: 250px;
   `}
 `;
 
@@ -106,6 +104,27 @@ export const ProfileCardCEdit = styled.i`
   ${() => css`
     font-size: 2rem;
     color: #000000;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    :hover{
+      filter: invert(1);
+      transition: ease-in 0.3s;
+    }
+  `}
+`;
+
+export const ProfileCardDivContentCreate = styled.div`
+  ${() => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 25px;
+    flex-wrap: nowrap;
+    width: 165px;
+    height: 250px;
   `}
 `;
 

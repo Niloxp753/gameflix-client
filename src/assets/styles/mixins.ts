@@ -237,7 +237,7 @@ const profileCardBodyContent = () => css`
   width: 160px;
   height: 160px;
   border-radius: 100%;
-  border: 2px solid #ffffff;
+  border: 2px solid #000000;
 `;
 
 const HomepageProfileImage = () => css`
@@ -255,11 +255,10 @@ const profileCardBodyContentCreate = () => css`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 160px;
-  height: 160px;
+  height: 195px;
   border-radius: 100%;
-  border: 2px solid #ffffff;
 `;
 
 const profileCardCreate = () => css`
