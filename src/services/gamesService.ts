@@ -10,7 +10,12 @@ export interface useGame {
   imdbScore: number;
   trailerYoutubeUrl: string;
   gameplayYoutubeUrl: string;
-  genre: string;
+  genre: [
+    {
+      id: string;
+      name: string;
+    }
+  ];
 }
 
 export const AllGames = {
@@ -27,7 +32,7 @@ export const AllGames = {
       });
     }
   },
-  
+
   GameById: async (id: string) => {
     try {
       const res = await api.get(`/games/${id}`);
@@ -83,4 +88,17 @@ export const AllGames = {
       });
     }
   },
+  setFavorite: async (favorite:object) => {
+    try {
+      const res = await api.post(`/favorite`,favorite);
+      return res;
+    } catch (error: any) {
+      swal({
+        title: "Error",
+        text: `${error.message}`,
+        icon: "error",
+        timer: 6000,
+      });
+    }
+  }
 };

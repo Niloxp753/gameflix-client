@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { RoutePath } from "types/routes";
 import { Homepage } from "pages/Homepage/index";
 import Profile from "pages/Profile";
+import { GameDetails } from "pages/GameDetails/index";
 
 const Router = () => {
     return (
@@ -14,6 +15,7 @@ const Router = () => {
             <Route path={RoutePath.REGISTER} element={<Register />} />
             <Route path={RoutePath.PROFILE} element={<Profile />} />
             <Route path={RoutePath.HOMEPAGE} element={<Homepage />} />
+            <Route path={RoutePath.GAMES} element={<GameDetails />} />
         </Routes>
     )
 }

@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { registerService, useRegister } from "services/authService";
 import swal from "sweetalert";
 import * as S from "./style";
 
+
 const Register = () => {
+  const {state}: any = useLocation()
+  console.log(state)
+
   const [values, setValues] = useState<useRegister>({
     name: "",
     email: "",
@@ -56,6 +60,7 @@ const Register = () => {
               required
             ></S.RegisterNameInput>
             <S.RegisterEmailInput
+              defaultValue={state?.email}
               placeholder="       Email"
               type="text"
               name="email"

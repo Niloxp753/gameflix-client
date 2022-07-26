@@ -1,14 +1,17 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { AllProfiles, useProfile } from "services/profileService";
+import swal from "sweetalert";
 import * as S from "./style";
 
-export const ModalCreateProfile = () => {
-  const navigate = useNavigate();
+interface Prop {
+  closeModal: () => void;
+}
+
+export const ModalCreateProfile = ({ closeModal }: Prop) => {
   const [values, setValues] = useState<useProfile>({
     title: "",
     imageURL: "",
-    gameId: ""
+    gameId: "",
   });
 
   const handleChangeValues = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,15 +24,18 @@ export const ModalCreateProfile = () => {
   const handleSubmitRegister = async (event: React.SyntheticEvent) => {
     event.preventDefault();
     const response = await AllProfiles.CreateProfile(values);
-    console.log(response?.data)
+    console.log(response?.data);
 
     if (response?.data) {
-    //   swal({
-    //     title: "Seja bem vindo",
-    //     icon: "success",
-    //     timer: 3000,
-    //   });
-      navigate("/profiles");
+      swal({
+        title: "Perfil criado com sucesso",
+        icon: "success",
+        timer: 1000,
+      });
+      closeModal();
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
     }
   };
 
@@ -51,13 +57,11 @@ export const ModalCreateProfile = () => {
           placeholder="Nome"
           onChange={handleChangeValues}
           id="title"
-          name="title"  
+          name="title"
           type="text"
           required
         />
-        <S.BtnModal type="submit">
-          CRIAR
-        </S.BtnModal>
+        <S.BtnModal type="submit">CRIAR</S.BtnModal>
       </S.FormModal>
     </S.Container>
   );

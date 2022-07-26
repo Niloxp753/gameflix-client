@@ -11,7 +11,6 @@ export const CardGamesContent = styled.section`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    
   `}
 `;
 
@@ -23,14 +22,37 @@ export const CardGamesDivContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    
+  `}
+`;
+
+export const HeartStyle = styled.i`
+  ${() => css`
+    position: absolute;
+    z-index: 0;
+    top: -9px;
+    left: -5px;
+    width: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+    height: 25px;
+    display: flex;
+    transform: rotate(336deg);
+    color: #6930c3;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
   `}
 `;
 
 export const CardGamesImgBg = styled.img`
   ${() => css`
     height: 220px;
-    width: 194px;
+    width: 195px;
     border-radius: 15px;
+    cursor: pointer;
   `}
 `;
 

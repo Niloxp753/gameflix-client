@@ -96,8 +96,11 @@ const inputHome = () => css`
 `;
 
 const inputHomepageSearch = () => css`
-  height: 60px !important;
+  height: 45px !important;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   background: ${colors.baseInput};
   border: 1px solid ${colors.baseLine};
@@ -238,6 +241,11 @@ const profileCardBodyContent = () => css`
   height: 160px;
   border-radius: 100%;
   border: 2px solid #000000;
+  cursor: pointer;
+  :hover{
+    border: 2px solid #ffffff;
+    transition: ease-in 0.3s;
+  }
 `;
 
 const HomepageProfileImage = () => css`
@@ -259,6 +267,11 @@ const profileCardBodyContentCreate = () => css`
   width: 160px;
   height: 195px;
   border-radius: 100%;
+  cursor: pointer;
+  :hover {
+    filter: invert();
+    transition: ease-in 0.3s;
+  }
 `;
 
 const profileCardCreate = () => css`

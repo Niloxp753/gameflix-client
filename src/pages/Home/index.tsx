@@ -1,7 +1,20 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import * as S from "./style";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('')
+
+  const goToRegister = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+    navigate('/register', {
+      state: {
+        email: email
+      }
+    })
+  }
+
   return (
     <S.Home>
       <S.HomeHeader>
@@ -27,11 +40,9 @@ const Home = () => {
             criar um usuário.
           </S.HomeTitleH3>
         </div>
-        <S.HomeDivDetailsRegister>
-          <S.HomeDetailsRegister placeholder="       Email" type={"text"}/>
-          <Link to={"/register"} style={{ textDecoration: "none" }}>
-            <S.HomeBtnDetailsRegister>Avançar</S.HomeBtnDetailsRegister>
-          </Link>
+        <S.HomeDivDetailsRegister onSubmit={goToRegister}>
+          <S.HomeDetailsRegister placeholder="       Email" type={"text"} onChange={(e) => setEmail(e.target.value)}/>
+          <S.HomeBtnDetailsRegister type="submit">Avançar</S.HomeBtnDetailsRegister>
         </S.HomeDivDetailsRegister>
       </S.HomeContent>
     </S.Home>

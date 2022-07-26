@@ -59,7 +59,7 @@ export const HomeHeaderDetailsLogo = styled.h1`
   `}
 `;
 
-export const HomeDivDetailsRegister = styled.div`
+export const HomeDivDetailsRegister = styled.form`
   ${() => css`
     display: flex;
     justify-content: center;

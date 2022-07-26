@@ -2,9 +2,10 @@ import bgHomepage from "assets/imgs/bg-homepage.webp";
 import { colors } from "assets/styles/colors";
 import { mixins } from "assets/styles/mixins";
 import styled, { css } from "styled-components";
+import inputSearch from "assets/icons/search-input.png";
 
 export const Homepage = styled.section`
-  ${({ theme }) => css`
+  ${() => css`
     background-image: url(${bgHomepage});
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +57,7 @@ export const HomepageDivColumn1 = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-left: 20px;
+    padding-left: 10px;
   `}
 `;
 
@@ -64,7 +65,7 @@ export const HomepageProfileDetails = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.primaryColorOpacity};
     width: 100%;
-    height: 100px;
+    height: auto;
     border-radius: 0px 10px 10px 0px;
     display: flex;
     justify-content: initial;
@@ -80,6 +81,19 @@ export const HomepageProfileIcon = styled.img`
   ${() => css`
     ${mixins.HomepageProfileImage}
     cursor: pointer;
+  `}
+`;
+
+export const HomepageProfileContainer = styled.div`
+  ${() => css`
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-style: bold;
+    gap: 10px;
   `}
 `;
 
@@ -99,10 +113,23 @@ export const HomepageDivColumn2 = styled.div`
 export const HomepageInputSearch = styled.input`
   ${({ theme }) => css`
     ${theme.mixins.inputHomepageSearch}
-    height: 60px;
+    height: 50px;
     border-radius: 5px;
+    padding: 16px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    font-size: large;
+    outline-style: none;
+    ::placeholder {
+      background-image: url(${inputSearch});
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0px 0px;
+      font-size: large;
+      font-weight: 500;
+      font-family: Arial, Helvetica, sans-serif;
+    }
   `}
 `;
 

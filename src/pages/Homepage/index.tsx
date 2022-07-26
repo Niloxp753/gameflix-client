@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AllProfiles, useProfile } from "services/profileService";
 import * as S from "./style";
 
+
 export const Homepage = () => {
   const [profile, setProfile] = useState<useProfile>({
     title: "",
@@ -17,7 +18,7 @@ export const Homepage = () => {
     },
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
@@ -29,9 +30,11 @@ export const Homepage = () => {
         console.log(profile);
       }
     };
-
+    
     fetchProfiles();
-  }, [id, profile]);
+  }, []);
+
+  
 
   return (
     <S.Homepage>
@@ -41,20 +44,25 @@ export const Homepage = () => {
       <S.HomepageMainDetails>
         <S.HomepageDivColumn1>
           <S.HomepageProfileDetails>
-            <S.HomepageProfileIcon onClick={()=>navigate('/profiles')}
+            <S.HomepageProfileIcon
+              onClick={() => navigate("/profiles")}
               src={profile.imageURL}
               alt="Avatar do perfil"
             ></S.HomepageProfileIcon>
-            {profile.title}
+            <S.HomepageProfileContainer>
+              <div>Usuário: {profile.user?.name}</div>
+              <div>Perfil: {profile.title}</div>
+              <div>Jogos Favoritos: {profile._count?.games}</div>
+            </S.HomepageProfileContainer>
           </S.HomepageProfileDetails>
         </S.HomepageDivColumn1>
         <S.HomepageDivColumn2>
-          <S.HomepageInputSearch />
+          <S.HomepageInputSearch placeholder='      Pesquise por jogos' />
           <S.HomepageDivTextGames>
             <S.HomepageGamesAll>Todos os Jogos</S.HomepageGamesAll>
             <S.HomepageGamesFavorite>Jogos Favoritos</S.HomepageGamesFavorite>
           </S.HomepageDivTextGames>
-          <CardGames />
+          <CardGames idProfile={id}/>
         </S.HomepageDivColumn2>
         <S.HomepageDivColumn3></S.HomepageDivColumn3>
       </S.HomepageMainDetails>

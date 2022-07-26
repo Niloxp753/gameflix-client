@@ -102,7 +102,7 @@ const Profile = () => {
                   onRequestClose={handleCloseModal}
                   style={customStyles}
                 >
-                  <ModalCreateProfile />
+                  <ModalCreateProfile closeModal={handleCloseModal} />
                 </Modal>
               </S.ProfileCardContentCreate>
             </S.ProfileCardDivContentCreate>
