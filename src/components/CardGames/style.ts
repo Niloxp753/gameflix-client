@@ -39,7 +39,7 @@ export const HeartStyle = styled.i`
     height: 25px;
     display: flex;
     transform: rotate(336deg);
-    color: #6930c3;
+    color: #3a00ea;
     font-size: 1.2rem;
     align-items: center;
     justify-content: center;

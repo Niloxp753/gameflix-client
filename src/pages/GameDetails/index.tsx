@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AllGames, useGame } from "services/gamesService";
+import { IoSettings } from "react-icons/io5";
 import * as S from "./style";
 
 export const GameDetails = () => {
@@ -36,22 +37,29 @@ export const GameDetails = () => {
         </S.HeaderGame>
         <S.MainGame>
           <S.DivColumn1Game>
-            <S.ProfileDetailsGame>
-              <S.ProfileIconGame
-                onClick={() => navigate("/profiles")}
-                src={gameId?.coverImageUrl}
-              />
-              <S.ProfileContainerGame>
-                <div>Jogo: {gameId?.title}</div>
-                <div>
-                  Gênero:{" "}
-                  {gameId?.genre.map((genre) => (
-                    <span key={genre.id}>{genre.name}</span>
-                  ))}
-                </div>
-                <div>Ano do jogo: {gameId?.year}</div>
-              </S.ProfileContainerGame>
-            </S.ProfileDetailsGame>
+            <S.DivProfileDetailsGame>
+              <S.ProfileDetailsGame>
+                <S.ProfileIconGame
+                  onClick={() => navigate("/profiles")}
+                  src={gameId?.coverImageUrl}
+                />
+                <S.ProfileContainerGame>
+                  <div>Jogo: {gameId?.title}</div>
+                  <div>
+                    Gênero:{" "}
+                    {gameId?.genre.map((genre) => (
+                      <span key={genre.id}>{genre.name}</span>
+                    ))}
+                  </div>
+                  <div>Ano do jogo: {gameId?.year}</div>
+                </S.ProfileContainerGame>
+              </S.ProfileDetailsGame>
+              <S.DivAdminEditGame>
+                <S.AdminEditGame>
+                  <IoSettings size={75}/>
+                </S.AdminEditGame>
+              </S.DivAdminEditGame>
+            </S.DivProfileDetailsGame>
           </S.DivColumn1Game>
           <S.DivColumn2Game>
             <S.DivTrailerGame

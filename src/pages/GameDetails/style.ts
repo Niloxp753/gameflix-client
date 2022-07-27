@@ -56,20 +56,33 @@ export const MainGame = styled.main`
 
 export const DivColumn1Game = styled.div`
   ${() => css`
-    width: 250px;
+    width: 97%;
     height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  `}
+`;
+
+export const DivProfileDetailsGame = styled.div`
+  ${() => css`
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     padding-left: 20px;
+    padding-right: 20px;
   `}
 `;
 
 export const ProfileDetailsGame = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.primaryColorOpacity};
-    width: 100%;
+  ${() => css`
+    background-color: #252525b0;
+    width: 240px;
     height: auto;
     border-radius: 0px 10px 10px 0px;
     display: flex;
@@ -77,8 +90,33 @@ export const ProfileDetailsGame = styled.div`
     align-items: center;
     flex-direction: row;
     gap: 10px;
-    padding-left: 10px;
+    padding: 7px;
     color: #ffffff;
+  `}
+`;
+
+export const DivAdminEditGame = styled.div`
+  ${() => css`
+    background-color: #252525b0;
+    width: 160px;
+    height: auto;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 7px;
+    color: #ffffff;
+  `}
+`;
+
+export const AdminEditGame = styled.i`
+  ${() => css`
+    
+    :hover{
+      filter: invert();
+    }
+    cursor: pointer;
   `}
 `;
 
@@ -135,14 +173,14 @@ export const DivColumn3Game = styled.div`
     max-height: 40vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 20px;
   `}
 `;
 
 export const DescriptionDetailsGame = styled.text`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.primaryColorOpacity};
+  ${() => css`
+    background-color: #252525b0;
     width: 100%;
     height: 120px;
     display: flex;

@@ -2,8 +2,9 @@ import { CardGames } from "components/CardGames/index";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AllProfiles, useProfile } from "services/profileService";
+import { IoGameController } from "react-icons/io5";
+import { FaUserEdit } from "react-icons/fa";
 import * as S from "./style";
-
 
 export const Homepage = () => {
   const [profile, setProfile] = useState<useProfile>({
@@ -30,11 +31,10 @@ export const Homepage = () => {
         console.log(profile);
       }
     };
-    
-    fetchProfiles();
-  }, []);
 
-  
+    fetchProfiles();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <S.Homepage>
@@ -57,14 +57,23 @@ export const Homepage = () => {
           </S.HomepageProfileDetails>
         </S.HomepageDivColumn1>
         <S.HomepageDivColumn2>
-          <S.HomepageInputSearch placeholder='      Pesquise por jogos' />
+          <S.HomepageInputSearch placeholder="      Pesquise por jogos" />
           <S.HomepageDivTextGames>
             <S.HomepageGamesAll>Todos os Jogos</S.HomepageGamesAll>
             <S.HomepageGamesFavorite>Jogos Favoritos</S.HomepageGamesFavorite>
           </S.HomepageDivTextGames>
-          <CardGames idProfile={id}/>
+          <CardGames idProfile={id} />
         </S.HomepageDivColumn2>
-        <S.HomepageDivColumn3></S.HomepageDivColumn3>
+        <S.HomepageDivColumn3>
+          <S.HomepageAdminDetails>
+            <S.HomepageAdminIconGame>
+              <IoGameController size={75} />
+            </S.HomepageAdminIconGame>
+            <S.HomepageAdminIconProfile>
+              <FaUserEdit size={75} />
+            </S.HomepageAdminIconProfile>
+          </S.HomepageAdminDetails>
+        </S.HomepageDivColumn3>
       </S.HomepageMainDetails>
     </S.Homepage>
   );

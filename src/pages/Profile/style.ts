@@ -69,7 +69,7 @@ export const ProfileBodyDivContentCards = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 840px;
+    width: 805px;
     gap: 20px;
   `}
 `;

@@ -72,7 +72,7 @@ export const HomepageProfileDetails = styled.div`
     align-items: center;
     flex-direction: row;
     gap: 10px;
-    padding-left: 10px;
+    padding: 10px;
     color: #ffffff;
   `}
 `;
@@ -169,10 +169,47 @@ export const HomepageGamesFavorite = styled.div`
 
 export const HomepageDivColumn3 = styled.div`
   ${() => css`
-    width: 20%;
-    max-height: 90vh;
+    min-width: 20%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    align-items: flex-end;
+    padding-right: 10px;
+  `}
+`;
+
+export const HomepageAdminDetails = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.primaryColorOpacity};
+    width: auto;
+    height: auto;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: row;
+    padding: 10px;
+    color: #ffffff;
+    gap: 20px;
+  `}
+`;
+
+export const HomepageAdminIconGame = styled.i`
+  ${() => css`
+    :hover {
+      filter: invert();
+      transition: ease-in-out 0.3s;
+    }
+    cursor: pointer;
+  `}
+`;
+
+export const HomepageAdminIconProfile = styled.i`
+  ${() => css`
+    :hover {
+      filter: invert();
+      transition: ease-in-out 0.3s;
+    }
+    cursor: pointer;
   `}
 `;
