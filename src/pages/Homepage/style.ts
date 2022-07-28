@@ -40,7 +40,6 @@ export const HomepageLogo = styled.div`
 export const HomepageMainDetails = styled.main`
   ${() => css`
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
