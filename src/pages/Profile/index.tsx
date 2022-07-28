@@ -1,4 +1,4 @@
-import { ModalCreateProfile } from "components/Modal";
+import { ModalCreateProfile } from "components/ModalProfile";
 import { useEffect, useState } from "react";
 import { AiOutlineUserDelete } from "react-icons/ai";
 import { FaUserEdit } from "react-icons/fa";

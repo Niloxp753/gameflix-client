@@ -61,10 +61,10 @@ export const CardGamesDivDetailsScore = styled.div`
     height: 550px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
   `}
 `;

@@ -2,12 +2,58 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AllGames, useGame } from "services/gamesService";
 import { IoSettings } from "react-icons/io5";
+import Modal from "react-modal";
 import * as S from "./style";
+import { ModalEditGame } from "components/ModalEditGame";
 
 export const GameDetails = () => {
   const navigate = useNavigate();
-  const [gameId, setGameId] = useState<useGame>();
+  const [gameId, setGameId] = useState<useGame>({
+    title: "",
+    coverImageUrl: "",
+    description: "",
+    year: 0,
+    imdbScore: 0,
+    trailerYoutubeUrl: "",
+    gameplayYoutubeUrl: "",
+    genre: [
+      {
+        id: "",
+        name: "",
+      },
+    ],
+  });
   const { id } = useParams();
+  Modal.setAppElement("#root");
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      padding: "0",
+      borderRadius: "16px",
+      display: "Flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    overlay: {
+      background: "rgba(0, 0, 0, 0.7)",
+    },
+  };
 
   useEffect(() => {
     gameById();
@@ -56,7 +102,14 @@ export const GameDetails = () => {
               </S.ProfileDetailsGame>
               <S.DivAdminEditGame>
                 <S.AdminEditGame>
-                  <IoSettings size={75}/>
+                  <IoSettings size={75} onClick={handleOpenModal} />
+                  <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={handleCloseModal}
+                    style={customStyles}
+                  >
+                    <ModalEditGame gameId={gameId} closeModal={handleCloseModal} />
+                  </Modal>
                 </S.AdminEditGame>
               </S.DivAdminEditGame>
             </S.DivProfileDetailsGame>

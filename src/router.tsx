@@ -6,6 +6,7 @@ import { RoutePath } from "types/routes";
 import { Homepage } from "pages/Homepage/index";
 import Profile from "pages/Profile";
 import { GameDetails } from "pages/GameDetails/index";
+import { GenreGames } from "pages/GenreGames";
 
 const Router = () => {
     return (
@@ -16,6 +17,9 @@ const Router = () => {
             <Route path={RoutePath.PROFILE} element={<Profile />} />
             <Route path={RoutePath.HOMEPAGE} element={<Homepage />} />
             <Route path={RoutePath.GAMES} element={<GameDetails />} />
+            <Route path={RoutePath.SETTINGS_GAMES} element={<GenreGames />} />
+            <Route path={RoutePath.SETTINGS_GENDERS} element={<GenreGames />} />
+            {/* <Route path={RoutePath.SETTINGS_USERS} element={<GenreGames />} /> */}
         </Routes>
     )
 }
