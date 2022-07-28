@@ -15,7 +15,6 @@ export const Homepage = styled.section`
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    overflow-y: hidden;
   `}
 `;
 
